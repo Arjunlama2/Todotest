@@ -18,4 +18,4 @@ ul.innerHTML=string
 }
 
 
-displayTasks()
+// displayTasks()
