@@ -19,3 +19,18 @@ ul.innerHTML=string
 
 
 // displayTasks()
+
+
+//git init
+// git status
+// git branch -M main
+// git remote add origin <repo-link>
+// git add .
+// git commit -m "first commit"
+// git push 
+
+
+// now nextime
+// git add .
+// git commit -m "your message"
+// git push
