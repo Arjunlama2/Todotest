@@ -1,9 +1,10 @@
-let Tasks=["data1","data2"]
+let Tasks= JSON.parse(localStorage.getItem("tasks")) || []
 
 function getDataFromHtml(event) {
     event.preventDefault()
 let task=event.target.task.value
 Tasks.push(task)
+localStorage.setItem("tasks",JSON.stringify(Tasks))
 displayTasks()
 }
 
@@ -11,15 +12,23 @@ displayTasks()
 function displayTasks() {
 let ul=document.getElementById("task-list")
 let string=""
-Tasks.forEach((el)=>{
-string+=`<li>${el} <button>delete</button></li>`
+Tasks.forEach((el,index)=>{
+string+=`<li>${el} <button onClick="deteleTask(${index})"><span class="material-symbols-outlined">
+delete
+</span></button></li>`
 })
 ul.innerHTML=string
 }
 
 
-// displayTasks()
+displayTasks()
 
+
+function deteleTask(index) {
+Tasks.splice(index,1)
+localStorage.setItem("tasks",JSON.stringify(Tasks))
+displayTasks()
+}
 
 //git init
 // git status
