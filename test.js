@@ -7,7 +7,9 @@ function test(){
 test()
 
 
+let word="hero"
 
+console.log(word.split(""))
 
 // const test2=()=>{
 //     console.log("from inside arrow fn")
